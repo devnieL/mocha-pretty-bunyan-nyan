@@ -7,7 +7,7 @@ const PrettyStream = require('bunyan-prettystream');
 const fs = require('fs');
 const OPT_FILE_NAME = 'test/mochabunyan.opts';
 
-let reporter = mocha.reporters.nyan,
+let reporter = mocha.reporters.Spec,
     mute = false,
     level = 'trace';
 
