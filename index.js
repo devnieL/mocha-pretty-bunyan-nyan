@@ -34,7 +34,7 @@ prettyStdOut.pipe(process.stdout);
 var _createLogger = bunyan.createLogger;
 bunyan.createLogger = function(options) {
     options.streams = [{
-        level: mute ? 99 : level,
+        level: mute ? 99 : (options.level || level),
         type: 'raw',
         stream: prettyStdOut
     }];
